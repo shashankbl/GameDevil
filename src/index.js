@@ -1,10 +1,13 @@
-import "./styles.css";
+import Paddle from "/src/paddle.js";
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+let canvas = document.getElementById("gameScreen");
+let ctx = canvas.getContext("2d");
+
+const GAME_WIDTH = 800;
+const GAME_HEIGHT = 600;
+
+ctx.clearRect(0, 0, 800, 600);
+
+let paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT);
+
+paddle.draw(ctx);
