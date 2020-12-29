@@ -1,7 +1,7 @@
 export default class Paddle {
   constructor(gameWidth, gameHeight) {
     this.width = 150;
-    this.weight = 30;
+    this.height = 20;
 
     this.position = {
       x: gameWidth / 2 - this.width / 2,
@@ -10,6 +10,7 @@ export default class Paddle {
   }
 
   draw(ctx) {
+    ctx.fillStyle = "#f00";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 }
