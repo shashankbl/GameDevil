@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Bouncing Ball</title>
     <meta charset="UTF-8" />
     <style>
       #gameScreen {
         border: 1px solid black;
+      }
+
+      img {
+        display: none;
       }
     </style>
   </head>
@@ -13,6 +17,8 @@
   <body>
     <script type="module" src="src/index.js"></script>
     <script type="module" src="src/paddle.js"></script>
+
+    <img id="img_ball" src="assets/images/football.png" width="5%" />
     <canvas id="gameScreen" width="800" height="600"></canvas>
   </body>
 </html>
